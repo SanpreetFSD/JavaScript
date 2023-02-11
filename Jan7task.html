@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var number = prompt("Please enter the number");
+    Output = 0 ;
+    Reverse = 0;
+    while(number){      
+    Reverse = number % 10;  
+    Output = Output * 10 + Reverse;  
+    number = Math.floor(number/10); 
+}
+console.log(Output);
+
+function multiplication(num){
+            out=0
+            for(i=1;i<=10;i++){
+                out=i*num
+                console.log(num + " X " + i + " = " + out)
+
+            }
+        }
+
+        Ip=parseInt(prompt("enter number: "))
+
+        if(Ip===1){
+        mul=parseInt(prompt("enter number:"))
+        op=multiplication(mul)}
+
+function pyramid(a) {
+  var str = "* ";
+  var space = " ";
+  for (var i = 1; i <= a; i++) {
+    console.log(space.repeat(a - i), str.repeat(i));
+  }
+}
+
+function factorial(a) {
+  if (a == 0) return 1;
+  else return a * factorial(a - 1);
+}
+
+function factfor(a) {
+  var fact = 1;
+  for (i = a; i > 0; i--) {
+    fact = fact * i;
+  }
+  console.log(fact);
+}
+
+var num1 = 0;
+          var num2 = 1
+          var a, i;  
+          var num = parseInt (prompt (" Enter a number: "));
+          var operator = prompt("enter a operator: ");
+          function calculator(opr, num) { 
+            if (operator == 'f') {
+                for ( i = 1; i <= num; i++) {
+                    a = num1 + num2;                    
+                    num1 = num2;  
+                    num2 = a;
+                    console.log(a);
+                }   
+            }
+          }
+          calculator(operator, num);
+    </script>
+</body>
+</html>
