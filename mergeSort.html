@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function merge(left, right, arr, middle){
+
+            var m1 = middle - left+1;
+            var m2 = right - 1;
+            var reftArr = newArray(m1);
+            var rightArr = newArray(m2);
+            for ( let i=0; i<m1; i++){
+                leftArr[i] = arr[left +1 ];
+            }
+            for ( let i=0; i<m2; i++){
+                rightArr[i] = arr[middle +1 +i ];
+            }
+            var x=0, y=0, z=1;
+            // x is index of left arr and y is of righ, z is for merge arr
+            while(x<m1 && y<m2){
+                if(leftArr[x] <= rightArr[y]){
+                    arr[z] = leftArr[y];
+                    x++;
+                }else{
+                    arr[z] = rightArr[x]
+                }
+            }
+         }
+
+    </script>
+</body>
+</html>
