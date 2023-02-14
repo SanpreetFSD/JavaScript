@@ -19,8 +19,8 @@ class BinarySearchTree{
     constructor(){
     this.root=null
     }
-}
-    insert(value);{
+
+    insert(value){
         const NewNode= new Node(value) 
         if(this.root===null){
             this.root= NewNode;
@@ -46,7 +46,7 @@ class BinarySearchTree{
                 }
             }
         }
-      search(root, value);{
+      search(root, value){
         if(root == null){
             return false;
         }else{if (root.value === value){
@@ -72,7 +72,25 @@ class BinarySearchTree{
         return node.value    
 
       }
+      inorder(node){
+        if(node!==null){
+            this.inorder(node.left)
+            console.log(node.value)
+            this.inorder(node.right)
+        }
+        // Arr conversion
+        Arr (){
+            let a = []
+            this.inorder (node => {
+                a.push(node.value)
+            })
+        }
     }
+
+
+    }
+}
+
 
     const bst = new BinarySearchTree();
     bst.insert(70);
