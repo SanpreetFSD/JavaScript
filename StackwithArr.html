@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class stack{
+            constructor(){
+                this.elements = [];
+            }
+            push(item){
+            this.elements.push(item);
+            }
+            pop(){
+                // return this.elements.pop();
+                return this.elements.shift();
+            }
+            top(){
+                return this.elements[this.elements.length -1];
+            }
+            size(){
+                return this.elements.length;
+            }   
+            toString(){
+                return this.elements.toString();
+                
+            }
+
+        }
+
+
+
+        const s = new stack();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        console.log(s);
+
+        s.pop();
+        console.log(s);
+
+        console.log(s.toString());
+    </script>
+</body>
+</html>

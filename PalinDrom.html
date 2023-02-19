@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+        function palindrom(str,l){
+        var stack = [];
+        midValue = parseInt(l/2);
+        var i;
+        for(i=0; i<midValue; i++){
+            stack.push(str[i]);
+
+            if(l%2!=0){
+                i++;
+            }
+        }
+        while(i != stack.length){
+            var item = str[str.length-1];
+            stack.pop();
+            if(item!=str[i]){
+                return false;
+                
+            }
+            i++;
+        }
+        return true;
+    }
+
+    var str = "12344321";
+    var l = str.length;
+    console.log(palindrom(str,l));
+    </script>
+</body>
+</html>

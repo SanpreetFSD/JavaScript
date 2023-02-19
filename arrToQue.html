@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Queue {
+
+constructor() {
+
+  this.items = [];
+
+}
+
+//Enqueue an element to Queue
+
+enqueue(element) {
+
+  console.log(element + " is added to JavaScript queue.");
+
+  this.items.push(element);
+
+}
+
+//Dequeue an element from Queue
+
+  dequeue() {
+
+return this.items.shift();
+
+}
+
+//Check Queue length
+
+length() {
+
+  return this.items.length;
+
+}
+
+//Check front element of Queue
+
+peek() {
+
+  return this.items[0];
+
+}
+
+//Print Queue elements
+
+print() {
+
+  var str = "";
+
+  for (var i = 0; i < this.items.length; i++)
+
+    str += this.items[i] + " ";
+
+  return str;
+
+}
+
+//Clear Queue
+
+clear() {
+
+  console.log("Queue is cleared");
+
+  this.items.length = 0;
+
+}
+
+//Check if Queue is empty
+
+isEmpty() {
+
+  return this.items.length === 0;
+
+}
+
+}
+    </script>
+</body>
+</html>

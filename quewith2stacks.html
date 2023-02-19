@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        class queue{
+            constructor(){
+                this.insertionstack=[];
+                this.deletionstack=[];
+            }
+            enqueue(value){
+                this.insertionstack.push(value);
+            }
+            dequeue(){
+                if(this.deletionstack.length===0){
+                    while(this.insertionstack.length>0){
+                     var temp = this.insertionstack.pop()
+                     this.deletionstack.push(temp)
+
+                    }
+                }
+                return this.deletionstack.pop()
+            }
+            print(){
+                return this.insertionstack.toString()
+            }
+        }
+
+        const qss = new queue()
+        qss.enqueue(2)
+        qss.enqueue(3)
+        qss.enqueue(4)
+        qss.enqueue(5)
+        qss.enqueue(6)
+        qss.enqueue(7)
+
+        console.log(qss.print())
+        qss.dequeue()
+        console.log(qss)
+
+    </script> -->
+
+    <script>
+        class queue {
+  constructor() {
+    this.insertionstack = [];
+    this.deletionstack = [];
+  }
+  enqueue(value) {
+    this.insertionstack.push(value);
+  }
+  dequeue() {
+    if (this.deletionstack.length == 0) {
+      while (this.insertionstack.length > 0) {
+        var temp = this.insertionstack.pop();
+        this.deletionstack.push(temp);
+      }
+    }
+    var poped = this.deletionstack.pop();
+    while (this.deletionstack.length > 0) {
+      var temp = this.deletionstack.pop();
+      this.insertionstack.push(temp);
+    }
+    return poped;
+  }
+  print() {
+    return this.insertionstack.toString();
+  }
+}
+
+const qss = new queue();
+qss.enqueue(2);
+qss.enqueue(3);
+qss.enqueue(4);
+qss.enqueue(5);
+qss.enqueue(6);
+qss.enqueue(7);
+console.log(qss.print());
+qss.dequeue();
+console.log(qss);
+qss.enqueue(10);
+console.log(qss);
+    </script>
+</body>
+</html>
