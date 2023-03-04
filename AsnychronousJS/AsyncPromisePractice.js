@@ -24,3 +24,21 @@ let order = (time, work) =>{
 }
 
 order(2000, ()=>console.log(`${stocks.Fruits[0]} was selected`))
+
+// Promise chaining
+
+.then(()=>{
+
+    return order(0000, () => console.log("Production Started"));
+
+})
+.then( ()=>{
+    return order(2000, () =>console.log("the fruit was chopped"))
+})
+
+
+.then( ()=>{
+    return order(1000, ()=>{
+        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was selected`)
+    })
+})
